@@ -1,0 +1,161 @@
+/* Body & Fonts */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  text-align: center;
+  padding: 150px 20px 100px;
+  position: relative;
+}
+
+/* Headings with animation */
+h1 {
+  font-size: 2.7em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: glow 2s ease-in-out infinite alternate;
+  font-weight: bold;
+}
+p{
+  font-size: 20px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ffcc;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+  }
+}
+
+/* Room Styling */
+.room {
+  margin: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 19px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+  transition: transform 0.4s ease;
+}
+
+.room:hover {
+  transform: scale(1.09);
+}
+
+/* Input Styling */
+input[type="text"] {
+  width: 260px;
+  height: 42px;
+  font-size: 20px;
+  padding: 8px;
+  border: 2px solid #00ffff;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: #fff;
+  transition: 0.3s ease;
+  margin: 20px;
+}
+
+input[type="text"]:hover {
+  border-color: #00ffcc;
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+}
+
+input[type="text"]:focus {
+  border-color: #00ffff;
+  outline: none;
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.6);
+}
+
+/* Button Styling */
+button {
+  width: 160px;
+  height: 44px;
+  font-size: 16px;
+  background-color: #00ffff;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.1s ease;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #00cccc;
+}
+
+button:active {
+  background-color: #009999;
+  transform: scale(0.96);
+}
+
+/* Hidden text interaction */
+.hidden-text {
+  color: #999;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hidden-text:hover {
+  color: #00ffcc;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+/* Background Video */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.6;
+  filter: blur(2px);
+}
+
+/* Footer Message */
+.footer-message {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  color: #00ffff;
+  font-size: 1.3em;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {opacity: 1;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+
+/* Timer */
+#timer {
+  font-size: 1.9em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: rgba(0, 255, 204, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Hide rooms until revealed */
+.hidden {
+  display: none;
+}
+.hidden-text {
+  color: transparent;
+  transition: color 0.5s ease;
+  cursor: pointer;
+  margin: 30px;
+}
+
+.hidden-text:hover {
+  color: rgb(0, 250, 0); 
+}
