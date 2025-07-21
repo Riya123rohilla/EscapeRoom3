@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mission CodeX: Escape the Spy Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <h1>Mission CodeX: Escape the Spy Lab</h1>
+  <p id="story">You are trapped! Solve puzzles to escape.</p>
+
+  <!-- Timer Display -->
+  <p id="timer">Time Left: 60</p>
+  <p onmouseover="revealHint()" class="hidden-text">Hover here to reveal the final code: freedom</p>
+
+
+  <video autoplay muted loop id="bgVideo">
+    <source src="backgroundvideo .mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Room 1: Password Lock -->
+  <div id="room1" class="room">
+    <h2>Room 1: Password Door</h2>
+    <input type="text" id="password" placeholder="Enter Lab Password">
+    <button onclick="checkPassword()">Unlock Door</button>
+  </div>
+
+  <!-- Room 2: Math Puzzle -->
+  <div id="room2" class="room hidden">
+    <h2>Room 2: Laser Trap</h2>
+    <button onclick="solveMathPuzzle()">Solve Math Puzzle</button>
+  </div>
+
+  <!-- Room 3: Security Panel -->
+  <div id="room3" class="room hidden">
+    <h2>Room 3: Security Panel</h2>
+    <p>Click the buttons in correct order: Red → Green → Blue</p>
+    <button onclick="pressButton('red')" style="background:red;">Red</button>
+    <button onclick="pressButton('green')" style="background:green;">Green</button>
+    <button onclick="pressButton('blue')" style="background:blue;">Blue</button>
+    <br><br>
+    <button onclick="collectKey()">Collect Key</button>
+    <p id="keyStatus">Key Not Collected</p>
+  </div>
+
+  <div id="room4" class="room hidden">
+    <h2>Room 4: The Final Code</h2>
+    <p onmouseover="revealHint()" class="hidden-text">
+      Hover here to reveal the final code: <b>freedom</b>
+    </p>
+    <input type="text" id="finalCode" placeholder="Enter Final Code">
+        <a href="congrats.html">
+      <button>Escape Room</button>
+    </a>
+  </div>
+
+  
+  <div class="footer-message">
+    <p>🕵️ Keep solving... every puzzle brings you closer to escape!</p>
+  </div>
+  
+  <script src="main.js"></script>
+
+</body>
+</html>
